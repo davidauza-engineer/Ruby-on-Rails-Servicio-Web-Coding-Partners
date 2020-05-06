@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @amistad.usuario_id %>
+</p>
+
+<p>
+  <strong>Amigo:</strong>
+  <%= @amistad.amigo_id %>
+</p>
+
+<p>
+  <strong>Confirmada:</strong>
+  <%= @amistad.confirmada %>
+</p>
+
+<%= link_to 'Edit', edit_amistad_path(@amistad) %> |
+<%= link_to 'Back', amistades_path %>

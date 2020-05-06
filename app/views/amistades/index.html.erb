@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Amistades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Amigo</th>
+      <th>Confirmada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amistades.each do |amistad| %>
+      <tr>
+        <td><%= amistad.usuario_id %></td>
+        <td><%= amistad.amigo_id %></td>
+        <td><%= amistad.confirmada %></td>
+        <td><%= link_to 'Show', amistad %></td>
+        <td><%= link_to 'Edit', edit_amistad_path(amistad) %></td>
+        <td><%= link_to 'Destroy', amistad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amistad', new_amistad_path %>

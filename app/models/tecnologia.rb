@@ -1,0 +1,2 @@
+class Tecnologia < ApplicationRecord
+end

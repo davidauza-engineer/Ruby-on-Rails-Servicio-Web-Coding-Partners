@@ -1,0 +1,32 @@
+<%= form_with(model: amistad, local: true) do |form| %>
+  <% if amistad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(amistad.errors.count, "error") %> prohibited this amistad from being saved:</h2>
+
+      <ul>
+        <% amistad.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :usuario_id_id %>
+    <%= form.text_field :usuario_id_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amigo_id_id %>
+    <%= form.text_field :amigo_id_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirmada %>
+    <%= form.check_box :confirmada %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

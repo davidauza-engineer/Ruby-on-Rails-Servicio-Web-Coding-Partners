@@ -1,0 +1,27 @@
+<%= form_with(model: usuario_tecnologia, local: true) do |form| %>
+  <% if usuario_tecnologia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(usuario_tecnologia.errors.count, "error") %> prohibited this usuario_tecnologia from being saved:</h2>
+
+      <ul>
+        <% usuario_tecnologia.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :usuario_id_id %>
+    <%= form.text_field :usuario_id_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tecnologia_id_id %>
+    <%= form.text_field :tecnologia_id_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

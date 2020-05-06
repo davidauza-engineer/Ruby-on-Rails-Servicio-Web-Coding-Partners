@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @usuario_tecnologia.usuario_id %>
+</p>
+
+<p>
+  <strong>Tecnologia:</strong>
+  <%= @usuario_tecnologia.tecnologia_id %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_tecnologia_path(@usuario_tecnologia) %> |
+<%= link_to 'Back', usuarios_tecnologias_path %>
